@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html ng-app="zoomEvents">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZOOM+Events</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+	<script src="js/controllers/main.js"></script>
+	<script src="js/services/events.js"></script>
+	<script src="js/core.js"></script>
+
+</head>
+
+<body ng-controller="mainController">
+  <div class="container">
+		<div class="row">
+			<h1 class="page-title">ZOOM+Events</h1>
+		</div
+		<div class="content">
+			<div class="row" ng-repeat="event in events" ng-hide="hideEvent" >
+				<div class="col-xs-12 o-container--info">
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 o-container--info__content">
+							<div class="col-xs-12">
+								<div class="clo-xs-12 list--events">
+									<div class="row list__item">
+															    <div class="events">
+																			<div>{{ event.description.length }}</div>
+															      <div>{{ event.title }}</div>
+																		<div>{{ event.where }}</div>
+																		<div >{{ event.description | limitTo:limit300}}
+																			<!-- <a href="">-less</a> -->
+																			<button ng-click="setLimit(300)" ng-hide="(limit300===300)||(event.description.length<=300)">less</button>
+																			<button ng-click="setLimit(0)" ng-hide="event.description.length<=limit300">more</button>
+																		</div>
+																		<button class="btn btn-default" ng-click="hideEvent = !hideEvent">HIDE</button>
+																	</div>
+						      </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+</body>
+</html>
