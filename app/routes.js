@@ -1,4 +1,4 @@
-// var Events = require('./models/events');
+
 
 function getEvents(res) {
   events.find(function (err, events){
@@ -11,7 +11,7 @@ function getEvents(res) {
 };
 
 module.exports = function (app) {
-  app.get('/api/events', function(req, res) {
+  app.get('/events', function(req, res) {
     getEvents(res);
   })
   app.get('*', function (req, res) {
