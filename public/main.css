@@ -35,7 +35,7 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-.list__item:last-child {
+.list__item {
   padding-bottom: 20px;
   margin-bottom: 0px;
   border-bottom: 3px solid #333;
@@ -43,6 +43,7 @@
 }
 .list__item h3 {
   color: #a6a6a6;
+  font-size: 21px;
   font-weight: 700;
   padding: 0.5em 0.9375em 0.75em 0.375em;
   line-height: 1.33;
@@ -50,13 +51,13 @@
 .list__item h4 {
   margin-bottom: .15em;
   margin-top: .35em;
-  font-size: 120%;
+  font-size: 23px;
   color: #222222;
   font-weight: 700;
   line-height: 1.4;
 }
 .list__item h5 {
-  font-size: 90%;
+  font-size: 19px;
   margin-bottom: .5em;
   margin-top: 0;
   font-weight: 500;
@@ -64,7 +65,7 @@
 }
 .list__item h6 {
   font-weight: 400;
-  font-size: 75%;
+  font-size: 14px;
   line-height: 1.35;
   color: #555;
 }

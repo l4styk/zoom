@@ -34,11 +34,12 @@
 									<div class="row list__item">
 										<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
 											<h3>
-												{{ event.day | date : 'EEE' }} <br>
-												{{ event.start | ampm }} -
+												{{ event.day | date : 'EEE' | uppercase }} <br>
+												{{ event.day | date : 'MMM d' | uppercase}} <br>
+												{{ event.start | ampm}} -
 												{{ event.finish | ampm }}
 											</h3>
-											<button class="btn btn-info" ng-click="hideEvent = !hideEvent">Hide Event</button>
+											<button class="btn btn-info btn-xs" ng-click="hideEvent = !hideEvent">Hide Event</button>
 										</div>
 										<div class="col-xs-9 col-sm-9 col-md-9 col-lg-10">
 											<h4>{{ event.title }}</h4>
