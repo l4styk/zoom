@@ -40,5 +40,31 @@
   margin-bottom: 0px;
   border-bottom: 3px solid #333;
   padding: 0.625em 0.625em 0.9375em 0.625em;
-
+}
+.list__item h3 {
+  color: #a6a6a6;
+  font-weight: 700;
+  padding: 0.5em 0.9375em 0.75em 0.375em;
+  line-height: 1.33;
+}
+.list__item h4 {
+  margin-bottom: .15em;
+  margin-top: .35em;
+  font-size: 120%;
+  color: #222222;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.list__item h5 {
+  font-size: 90%;
+  margin-bottom: .5em;
+  margin-top: 0;
+  font-weight: 500;
+  color: #555;
+}
+.list__item h6 {
+  font-weight: 400;
+  font-size: 75%;
+  line-height: 1.35;
+  color: #555;
 }

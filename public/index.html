@@ -13,6 +13,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 
 	<script src="js/controllers/main.js"></script>
+	<script src="js/filters/filter.js"></script>
 	<script src="js/services/events.js"></script>
 	<script src="js/core.js"></script>
 
@@ -31,17 +32,24 @@
 							<div class="col-xs-12">
 								<div class="clo-xs-12 list--events">
 									<div class="row list__item">
-															    <div class="events">
-																			<div>{{ event.description.length }}</div>
-															      <div>{{ event.title }}</div>
-																		<div>{{ event.where }}</div>
-																		<div >{{ event.description | limitTo:limit300}}
-																			<!-- <a href="">-less</a> -->
-																			<button ng-click="setLimit(300)" ng-hide="(limit300===300)||(event.description.length<=300)">less</button>
-																			<button ng-click="setLimit(0)" ng-hide="event.description.length<=limit300">more</button>
-																		</div>
-																		<button class="btn btn-default" ng-click="hideEvent = !hideEvent">HIDE</button>
-																	</div>
+										<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+											<h3>
+												{{ event.day | date : 'EEE' }} <br>
+												{{ event.start | ampm }} -
+												{{ event.finish | ampm }}
+											</h3>
+											<button class="btn btn-info" ng-click="hideEvent = !hideEvent">Hide Event</button>
+										</div>
+										<div class="col-xs-9 col-sm-9 col-md-9 col-lg-10">
+											<h4>{{ event.title }}</h4>
+											<h5>{{ event.where | addressName}}</h5>
+											<h5>{{ event.where | addressLocation}}</h5>
+											<h6 ng-init="limit300 = 300">
+												{{ event.description | limitTo:limit300}}
+												<a href="" ng-click="limit300 = 10000000" ng-hide="event.description.length<=limit300">More</a>
+											</div>
+											</h6>
+										</div>
 						      </div>
 							</div>
 						</div>

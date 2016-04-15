@@ -1,1 +1,1 @@
-angular.module('zoomEvents', ['eventsController', 'eventsService']);
+angular.module('zoomEvents', ['eventsController', 'eventsService', 'eventsFilter']);
