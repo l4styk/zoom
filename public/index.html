@@ -49,6 +49,7 @@
 											<h6 ng-init="limit300 = 300">
 												{{ event.description | limitTo:limit300}}
 												<a href="" ng-click="limit300 = 10000000" ng-hide="event.description.length<=limit300">More</a>
+												<a href="" ng-click="limit300 = 300" ng-hide="event.description.length>=limit300">Less</a>
 											</h6>
 											<p><a href="{{event.link}}" >RSVP</a></p>
 										 </div>
